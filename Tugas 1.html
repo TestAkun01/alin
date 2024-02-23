@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ini judul (dia awali dengan #) &#8212; List Tugas</title>
+    <title>Tugas 1 &#8212; List Tugas</title>
   
   
   
@@ -351,7 +351,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,11 +364,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ini judul (dia awali dengan #)</h1>
+    <h1>Tugas 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github">Membuat web statis emenggunakan template dari jupyter book di github</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -376,9 +386,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ini-judul-dia-awali-dengan">
-<h1>ini judul (dia awali dengan #)<a class="headerlink" href="#ini-judul-dia-awali-dengan" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
+<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Link to this heading">#</a></h1>
 <p>bisa di isi terserah</p>
+<section id="membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github">
+<h2>Membuat web statis emenggunakan template dari jupyter book di github<a class="headerlink" href="#membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>tambahkan file .nojekyll (kosongan) di repo yang kalian gunakan
+kenapa ? karena kalo gak ditambahin nanti bakal error :)</p></li>
+<li><p>buka codespace pada github</p></li>
+<li><p>pada terminal instal jupyter book
+ketik aja “pip install jupyter-book”</p></li>
+<li><p>lalu buat template dari buku nya
+masih diterminal ketik “jupyer-book create (terserah kasih nama apa)”</p></li>
+<li><p>lanjut build buku nya
+ketik “jupyter-book build (nama yang di masukin tadi)”</p></li>
+<li><p>udah di build ? nah masuk ke file (nama yang tadi) &gt;&gt; _build &gt;&gt; html
+copy semua file yang ada di folder html lalu paste di bagian luar</p></li>
+<li><p>kasih pesan lalu comit &gt;&gt; sync</p></li>
+<li><p>ke github &gt;&gt; setting &gt;&gt; page
+ubah branch nya menjadi branch yang digunakan tunggu hingga muncul link website di bagian atas</p></li>
+<li><p>jika kalian klik maka akan masuk ke html yang tadi sudah di build</p></li>
+</ol>
+<p>sekian terima kasih</p>
+<p>??? masih bingung ??? cari solusi sendiri bl***ok jangan manja !1!1!1!
+cari di forum atau dok lah pasti ada</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
@@ -391,6 +423,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,7 +481,20 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github">Membuat web statis emenggunakan template dari jupyter book di github</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
