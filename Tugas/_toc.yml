@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: Tugas 1
+- file: Tugas-1
 - file: markdown
 - file: markdown-notebooks
