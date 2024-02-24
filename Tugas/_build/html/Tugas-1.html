@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -393,33 +393,42 @@ document.write(`
 <section id="membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github">
 <h2>Membuat web statis emenggunakan template dari jupyter book di github<a class="headerlink" href="#membuat-web-statis-emenggunakan-template-dari-jupyter-book-di-github" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>tambahkan file .nojekyll (kosongan) di repo yang kalian gunakan
-kenapa ? karena kalo gak ditambahin nanti bakal error :)</p></li>
-<li><p>buka codespace pada github</p></li>
-<li><p>pada terminal instal jupyter book
-ketik aja “pip install jupyter-book”</p></li>
-<li><p>lalu buat template dari buku nya
-masih diterminal ketik “jupyer-book create (terserah kasih nama apa)”</p></li>
-<li><p>lanjut build buku nya
-ketik “jupyter-book build (nama yang di masukin tadi)”</p></li>
-<li><p>udah di build ? nah masuk ke file (nama yang tadi) &gt;&gt; _build &gt;&gt; html
-copy semua file yang ada di folder html lalu paste di bagian luar</p></li>
-<li><p>kasih pesan lalu comit &gt;&gt; sync</p></li>
-<li><p>ke github &gt;&gt; setting &gt;&gt; page
-ubah branch nya menjadi branch yang digunakan tunggu hingga muncul link website di bagian atas</p></li>
-<li><p>jika kalian klik maka akan masuk ke html yang tadi sudah di build</p></li>
+<li><p>pertama tama buat akun github lalu buat repository baru
+tambahkan readme pada repository</p></li>
+<li><p>branch defalut adalah “main” pada branch ini masuk ke codespace</p></li>
+<li><p>pada terminal ketik “pip install jupyter-book”
+ini digunakan untuk menginstall jupyter ke codespace</p></li>
+<li><p>untuk membuat template nya ketik “jupyter-book create (nam folder)”
+untuk nama folder bisa diidi terserah
+juyter-book dapat di singkat menjadi jb</p></li>
+<li><p>lanjut ubah file yang ada ke bentuk html dengan mengetik “jb build (nam folder)”
+nama folder harus sama seperti saat crate</p></li>
+<li><p>setelah itu ke folder _build/html
+copy semua isi yang ada di folder html</p></li>
+<li><p>pada bagian repo tambahkan file baru dengan nama “.nojekyll”
+file tidak beriai apa apa</p></li>
+<li><p>ke bagian comit isi bagian pesan dan klik commit lalu sync
+pesan akan ditamplikan pada github</p></li>
+<li><p>kembali ke github masuk ke setting lalu pages
+pada  bagian branch ubah dari none ke main (nama branch) lalu save
+tunggu hingga muncul link pada bagian atas</p></li>
+<li><p>jika sudah klik link untuk mengecek apakah terjadi error</p></li>
 </ol>
 <p>sekian terima kasih</p>
 <p>??? masih bingung ??? cari solusi sendiri bl***ok jangan manja !1!1!1!
 cari di forum atau dok lah pasti ada</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;mboh ra roh&quot;</span>
+<span class="k">if</span> <span class="n">html</span> <span class="o">==</span> <span class="s2">&quot;berhasil&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;yeay bisa&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;halah A** A***** K***** **** *******&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello world
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>halah A** A***** K***** **** *******
 </pre></div>
 </div>
 </div>
