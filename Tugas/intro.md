@@ -1,6 +1,4 @@
-# Welcome to my Jupyter Book
-
-halaman yang pertama kali diliat
+# Komputasi Aljabar linear
 
 Table Of Content
 
