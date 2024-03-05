@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 3 &#8212; List Tugas</title>
+    <title>Matrix &#8212; List Tugas</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tugas 2" href="Tugas-2.html" />
+    <link rel="prev" title="Eliminasi Gaussian" href="Tugas-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,9 +176,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Tugas 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas-2.html">Tugas 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-2.html">Eliminasi Gaussian</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrix</a></li>
 </ul>
 
     </div>
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 3</h1>
+    <h1>Matrix</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,7 +374,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">…..</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-numpy">operasi matrix menggunakan numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix">Operasi matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-tanpa-menggunakan-numpy">perkalian matriks tanpa menggunakan numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-menggunakan-numpy">perkalian matriks menggunakan numpy</a></li>
 </ul>
             </nav>
         </div>
@@ -386,11 +389,243 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-3">
-<h1>Tugas 3<a class="headerlink" href="#tugas-3" title="Link to this heading">#</a></h1>
-<p>…..</p>
-<section id="id1">
-<h2>…..<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="matrix">
+<h1>Matrix<a class="headerlink" href="#matrix" title="Link to this heading">#</a></h1>
+<section id="operasi-matrix-menggunakan-numpy">
+<h2>operasi matrix menggunakan numpy<a class="headerlink" href="#operasi-matrix-menggunakan-numpy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># array ditentukan secara manual</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix B&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix C&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix D&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A
+[[1 3]
+ [2 1]] 
+
+Matrix B
+[[ 3  0  4]
+ [-1 -2 -1]] 
+
+Matrix C
+[[-2  1]
+ [ 4  1]] 
+
+Matrix D
+[[2]
+ [6]] 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># array ditentukan secara random</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[9 7]
+ [8 8]] 
+
+[[6 5]
+ [5 2]
+ [9 7]] 
+
+[[6 5 8]
+ [5 6 9]
+ [7 9 8]] 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="operasi-matrix">
+<h2>Operasi matrix<a class="headerlink" href="#operasi-matrix" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># penjumlahan</span>
+
+<span class="c1"># cek jumlah baris dan kolom matrix menggunakan shape</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># jika terdapat dua matrix yang memilik jumlah baris dan kolom yang sama maka kedua matrix tersebut dapat di jumlahkan</span>
+<span class="n">ac</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">C</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ac</span><span class="p">)</span>
+<span class="c1"># di operasi penjumlahan matrix juga berlaku sifat komunikatif</span>
+<span class="c1"># (A + B) + C = A + (B + C)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
+(2, 2)
+
+[[-1  4]
+ [ 6  2]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># perkalian matrix dengan skalar</span>
+
+<span class="c1"># C dan d adalah konnstanta dan A adalh matrix</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Atau</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">A2</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># berbeda cara tapi memiliki hasil yang sama</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 6 18]
+ [12  6]] 
+
+Atau
+
+[[ 6 18]
+ [12  6]] 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perkalian antar matrix</span>
+
+<span class="c1"># Untuk mencari hasil kali matriks A dengan matriks B ialah dengan mengalikan elemen pada baris-baris matriks A </span>
+<span class="c1"># dengan elemen pada kolom-kolom matriks B, kemudian jumlahkan hasil perkalian antara baris dan kolom tersebut.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="perkalian-matriks-tanpa-menggunakan-numpy">
+<h2>perkalian matriks tanpa menggunakan numpy<a class="headerlink" href="#perkalian-matriks-tanpa-menggunakan-numpy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listA</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="p">]</span>
+
+<span class="n">listB</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">]</span>
+  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">,</span><span class="n">listA</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAtriks B&quot;</span><span class="p">,</span><span class="n">listB</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;panjang baris dan kolom&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+  <span class="n">hasil1</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">jumlah</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+      <span class="n">jumlah</span> <span class="o">+=</span> <span class="n">listA</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">listB</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">hasil1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jumlah</span><span class="p">)</span>
+  <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil dari perkalian matrix&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A [[3, 4], [2, 5], [1, 3]] 
+
+MAtriks B [[2, 3, 1], [1, 4, 3]] 
+
+panjang baris dan kolom
+3 2 
+
+2 3 
+
+hasil dari perkalian matrix
+[[10, 25, 15], [9, 26, 17], [5, 15, 10]] 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="perkalian-matriks-menggunakan-numpy">
+<h2>perkalian matriks menggunakan numpy<a class="headerlink" href="#perkalian-matriks-menggunakan-numpy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MatriksA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+<span class="n">MatriksB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MatriksA</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MatriksB</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">dot1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">MatriksA</span><span class="p">,</span><span class="n">MatriksB</span><span class="p">)</span>
+<span class="n">dot2</span> <span class="o">=</span> <span class="n">MatriksA</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">MatriksB</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dot1</span><span class="p">)</span>
+<span class="c1"># print(dot2)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 4]
+ [2 5]
+ [1 3]] 
+
+[[2 3 1]
+ [1 4 3]] 
+
+[[10 25 15]
+ [ 9 26 17]
+ [ 5 15 10]]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -430,7 +665,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 2</p>
+        <p class="prev-next-title">Eliminasi Gaussian</p>
       </div>
     </a>
 </div>
@@ -449,7 +684,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">…..</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-numpy">operasi matrix menggunakan numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix">Operasi matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-tanpa-menggunakan-numpy">perkalian matriks tanpa menggunakan numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-menggunakan-numpy">perkalian matriks menggunakan numpy</a></li>
 </ul>
   </nav></div>
 
