@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -376,6 +376,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-web-statis-menggunakan-template-dari-jupyter-book-di-github">Membuat web statis menggunakan template dari jupyter book di github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-jupyter-book">update jupyter book</a></li>
 </ul>
             </nav>
         </div>
@@ -393,21 +394,28 @@ document.write(`
 <h2>Membuat web statis menggunakan template dari jupyter book di github<a class="headerlink" href="#membuat-web-statis-menggunakan-template-dari-jupyter-book-di-github" title="Link to this heading">#</a></h2>
 <p><img alt="Thumbnail" src="_images/Thumbnail.png" /></p>
 <ol class="arabic simple">
-<li><p>pertama tama buat akun github lalu buat repository baru
-tambahkan readme pada repository</p></li>
+<li><p>pertama tama buat akun github lalu buat repository baru dan tambahkan file readme pada repository</p></li>
 <li><p>branch defalut adalah “main” pada branch ini masuk ke codespace</p></li>
 <li><p>pada terminal ketik “pip install jupyter-book”</p></li>
 <li><p>untuk membuat template nya ketik “jupyter-book create (nama folder)” untuk nama folder bisa diisi terserah (juyter-book dapat di singkat menjadi jb)</p></li>
 <li><p>lanjut ubah file yang ada ke bentuk html dengan mengetik “jb build (nama folder)” nama folder harus sama seperti saat create</p></li>
 <li><p>setelah itu ke folder _build/html dan copy semua isi yang ada di folder html</p></li>
-<li><p>pada bagian repo tambahkan file baru dengan nama “.nojekyll”
-file tidak beriai apa apa</p></li>
+<li><p>pada bagian repo tambahkan file baru dengan nama “.nojekyll” dan file ini tidak beriai apa apa</p></li>
 <li><p>ke bagian commit isi bagian pesan dan klik commit lalu sync pesan dapat diisi terserah dan akan ditamplikan pada github</p></li>
-<li><p>kembali ke github masuk ke setting lalu pages pada bagian branch ubah dari none ke main (nama branch yang berisi file jupyter book) lalu save
-tunggu hingga muncul link pada bagian github pages</p></li>
+<li><p>kembali ke github masuk ke setting lalu pages pada bagian branch ubah dari none ke main (nama branch yang berisi file jupyter book) lalu save, tunggu hingga muncul link pada bagian github pages</p></li>
 <li><p>jika sudah klik link untuk mengecek tampilan website nya</p></li>
 </ol>
 <p>untuk link youtube dapat di akses melalui link berikut: <a class="reference external" href="https://youtu.be/CQgyV_BIA6k">Link YouTube</a></p>
+</section>
+<section id="update-jupyter-book">
+<h2>update jupyter book<a class="headerlink" href="#update-jupyter-book" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>hapus semua file jupyter book yang sudah di build(baik yang ada pada folder _build atau di luar folder jupter book)</p></li>
+<li><p>build ulang jupyter book dengan mengetik “jupyter-book build (nama folder)”</p></li>
+<li><p>setelah di build pindah semua file yang ada pada folder _build/html ke luar folder jupyter book</p></li>
+<li><p>lalu commit dan sync ulang</p></li>
+<li><p>cek pada github apakah terjadi error</p></li>
+</ol>
 </section>
 </section>
 
@@ -476,6 +484,7 @@ tunggu hingga muncul link pada bagian github pages</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-web-statis-menggunakan-template-dari-jupyter-book-di-github">Membuat web statis menggunakan template dari jupyter book di github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-jupyter-book">update jupyter book</a></li>
 </ul>
   </nav></div>
 

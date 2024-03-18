@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -377,7 +377,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-library-numpy">Operasi matrix menggunakan library numpy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix">Operasi matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian">perkalian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-tanpa-menggunakan-perunlangan">perkalian matriks tanpa menggunakan perunlangan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-perkalian-matriks">Tugas perkalian matriks</a></li>
 </ul>
             </nav>
         </div>
@@ -403,21 +403,7 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gunakan</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">matrix</span><span class="p">])</span> <span class="n">untuk</span> <span class="n">membuat</span> <span class="n">matrix</span> <span class="n">dengan</span> <span class="n">nilai</span> <span class="n">yang</span> <span class="n">dapat</span> <span class="n">diisi</span> <span class="n">sendiri</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="n">gunakan</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">matrix</span><span class="p">])</span> <span class="n">untuk</span> <span class="n">membuat</span> <span class="n">matrix</span> <span class="n">dengan</span> <span class="n">nilai</span> <span class="n">yang</span> <span class="n">dapat</span> <span class="n">diisi</span> <span class="n">sendiri</span>
-            <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
+<p>gunakan np.array([matrix]) untuk membuat matrix dengan nilai yang dapat diisi sendiri</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -472,16 +458,19 @@ Matrix D
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 0]
- [1 5]] 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix F
+[[1 9]
+ [2 6]] 
 
-[[2 4]
- [5 5]
- [6 7]] 
+Matrix E
+[[5 6]
+ [7 1]
+ [3 7]] 
 
-[[8 2 9]
- [1 6 5]
- [1 1 9]] 
+Matrix G
+[[8 8 5]
+ [2 7 8]
+ [2 8 7]] 
 </pre></div>
 </div>
 </div>
@@ -578,8 +567,9 @@ hasil perkalian matriks A dengan skalar k
 <p>Perkalian Dua Matriks</p>
 <p>Berbeda dengan perkalian skalar yang hanya mengalikan setiap elemen matriks dengan bilangan skalar, perkalian dua matriks memiliki aturan tersendiri.  Syarat dua buah matriks, misal matriks A dan matriks B, dapat dikalikan adalah jika banyaknya kolom matriks A sama dengan banyaknya baris matriks B.</p>
 </section>
-<section id="perkalian-matriks-tanpa-menggunakan-perunlangan">
-<h2>perkalian matriks tanpa menggunakan perunlangan<a class="headerlink" href="#perkalian-matriks-tanpa-menggunakan-perunlangan" title="Link to this heading">#</a></h2>
+<section id="tugas-perkalian-matriks">
+<h2>Tugas perkalian matriks<a class="headerlink" href="#tugas-perkalian-matriks" title="Link to this heading">#</a></h2>
+<p>perkalian dua matriks menggunakan perunlangan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listA</span> <span class="o">=</span> <span class="p">[</span>
@@ -742,7 +732,7 @@ hasil dari perkalian matrix
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-library-numpy">Operasi matrix menggunakan library numpy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix">Operasi matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian">perkalian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-tanpa-menggunakan-perunlangan">perkalian matriks tanpa menggunakan perunlangan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-perkalian-matriks">Tugas perkalian matriks</a></li>
 </ul>
   </nav></div>
 
