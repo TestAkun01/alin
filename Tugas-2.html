@@ -228,6 +228,55 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/Tugas-2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -377,7 +426,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-operasi-sistem-linear-menggunakan-metode-eliminasi-gaussian">Penyelesaian sistem operasi sistem linear menggunakan metode eliminasi gaussian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-eliminasi-gaussian">Contoh soal eliminasi gaussian</a></li>
 </ul>
             </nav>
@@ -392,8 +440,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="eliminasi-gaussian">
 <h1>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h1>
-<section id="penyelesaian-sistem-operasi-sistem-linear-menggunakan-metode-eliminasi-gaussian">
-<h2>Penyelesaian sistem operasi sistem linear menggunakan metode eliminasi gaussian<a class="headerlink" href="#penyelesaian-sistem-operasi-sistem-linear-menggunakan-metode-eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p>Eliminasi Gauss adalah algoritma yang digunakan untuk menyelesaikan sistem persamaan linear. Algoritma ini terdiri dari serangkaian operasi yang dilakukan pada matriks koefisien dari sistem persamaan tersebut.</p>
 <p>Ada tiga jenis operasi baris dasar yang dapat dilakukan pada baris matriks tersebut:</p>
 <ol class="arabic simple">
@@ -402,7 +448,6 @@ document.write(`
 <li><p>Menambahkan suatu baris dengan suatu kelipatan dari baris yang lain.</p></li>
 </ol>
 <p>Operasi-operasi ini tidak mengubah kumpulan solusi. Oleh karena itu, jika tujuan seseorang adalah untuk menyelesaikan sistem persamaan linear, penggunaan operasi baris ini dapat membuat masalah menjadi lebih mudah</p>
-</section>
 <section id="contoh-soal-eliminasi-gaussian">
 <h2>Contoh soal eliminasi gaussian<a class="headerlink" href="#contoh-soal-eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -571,7 +616,7 @@ x1 = 1
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "executablebooks/jupyter-book",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -631,7 +676,6 @@ x1 = 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-operasi-sistem-linear-menggunakan-metode-eliminasi-gaussian">Penyelesaian sistem operasi sistem linear menggunakan metode eliminasi gaussian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-eliminasi-gaussian">Contoh soal eliminasi gaussian</a></li>
 </ul>
   </nav></div>

@@ -225,6 +225,55 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/Tugas-3.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -374,7 +423,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-library-numpy">Operasi matrix menggunakan library numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan-library-numpy-pada-matrix">Penggunaan library numpy pada matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-perkalian-dua-matriks">Tugas perkalian dua matriks</a></li>
 </ul>
@@ -390,10 +439,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrix">
 <h1>Matrix<a class="headerlink" href="#matrix" title="Link to this heading">#</a></h1>
-<section id="operasi-matrix-menggunakan-library-numpy">
-<h2>Operasi matrix menggunakan library numpy<a class="headerlink" href="#operasi-matrix-menggunakan-library-numpy" title="Link to this heading">#</a></h2>
 <p>matriks adalah susunan bilangan-bilangan berbentuk persegi panjang yang diatur dalam baris atau kolom dengan dibatasi kurung. Bilangan yang tersusun dalam matriks disebut elemen/unsur matriks. Baris adalah susunan bilangan-bilangan yang mendatar (horizontal), sedangkan kolom adalah susunan bilangan-bilangan yang tegak (vertikal).</p>
 <p>Ordo matriks adalah banyaknya elemen baris dan banyaknya elemen kolom dari suatu matriks. Jika sebuah matriks memiliki i baris dan j kolom, maka matriks tersebut berordo i x j, dapat dituliskan Ai.j</p>
+<section id="penggunaan-library-numpy-pada-matrix">
+<h2>Penggunaan library numpy pada matrix<a class="headerlink" href="#penggunaan-library-numpy-pada-matrix" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -402,7 +451,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>gunakan np.array([matrix]) untuk membuat matrix dengan nilai yang dapat diisi sendiri</p>
+<p>np.array([matrix]) digunakan  untuk membuat matrix dengan nilai yang dapat diisi sendiri</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -441,7 +490,7 @@ Matrix D
 </div>
 </div>
 </div>
-<p>gunakan np.random.randint(n, size(=i,j)) untuk membuat matrix debgan nilai interger acak 0-n dan memiliki baris i dan kolom j</p>
+<p>np.random.randint(n, size(=i,j)) digunakan untuk membuat matrix dengan nilai interger acak 0-n yang mempunyai baris i dan kolom j</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -458,18 +507,18 @@ Matrix D
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix F
-[[2 9]
- [1 1]] 
+[[9 1]
+ [7 0]] 
 
 Matrix E
-[[5 1]
- [0 1]
- [3 5]] 
+[[0 5]
+ [5 5]
+ [9 9]] 
 
 Matrix G
-[[2 9 6]
- [3 9 9]
- [1 8 7]] 
+[[5 3 1]
+ [3 6 7]
+ [8 4 0]] 
 </pre></div>
 </div>
 </div>
@@ -729,7 +778,7 @@ hasil dari perkalian matrix
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "executablebooks/jupyter-book",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -780,7 +829,7 @@ hasil dari perkalian matrix
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matrix-menggunakan-library-numpy">Operasi matrix menggunakan library numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan-library-numpy-pada-matrix">Penggunaan library numpy pada matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-perkalian-dua-matriks">Tugas perkalian dua matriks</a></li>
 </ul>
