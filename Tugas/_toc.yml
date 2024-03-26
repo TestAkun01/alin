@@ -3,7 +3,11 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Tugas-1
-- file: Tugas-2
-- file: Tugas-3
+parts:
+  - caption: Komputasi Aljabar Linear
+    chapters:
+    - file: Tugas-2
+    - file: Tugas-3
+  - caption: Tambahan
+    chapters:
+    - file: Tugas-1

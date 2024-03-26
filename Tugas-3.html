@@ -60,7 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Eliminasi Gaussian" href="Tugas-2.html" />
+    <link rel="next" title="Template Web Statis Dari Jupyter Book" href="Tugas-1.html" />
+    <link rel="prev" title="Penyelesaian Persamaan Sistem Linier" href="Tugas-2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,14 +172,18 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Komputasi Aljabar linear
+                    Pendahuluan
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Github</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas-2.html">Eliminasi Gaussian</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Komputasi Aljabar Linear</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas-2.html">Penyelesaian Persamaan Sistem Linier</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tambahan</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Template Web Statis Dari Jupyter Book</a></li>
 </ul>
 
     </div>
@@ -440,7 +445,7 @@ Matrix D
 </div>
 </div>
 </div>
-<p>np.random.randint(n, size(=i,j)) digunakan untuk membuat matrix dengan nilai interger acak 0-n yang mempunyai baris i dan kolom j</p>
+<p>np.random.randint(n, size(=i, j)) digunakan untuk membuat matrix dengan nilai interger acak 0-n yang mempunyai baris i dan kolom j</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -457,18 +462,18 @@ Matrix D
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix F
-[[2 5]
- [9 0]] 
+[[4 1]
+ [6 2]] 
 
 Matrix E
-[[9 9]
- [3 4]
- [2 8]] 
+[[8 8]
+ [1 7]
+ [8 1]] 
 
 Matrix G
-[[1 2 5]
- [5 4 7]
- [2 8 7]] 
+[[7 0 1]
+ [1 0 4]
+ [5 1 6]] 
 </pre></div>
 </div>
 </div>
@@ -575,9 +580,8 @@ Pada operasi perkalian skalar, sebuah matriks dikalikan dengan bilangan skalar. 
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># perkalian matrix dengan skalar</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># k adalah skalar dan A adalah matrix</span>
 
-<span class="c1"># k adalah skalar dan A adalh matrix</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">Ak</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="n">A</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;matrix A&quot;</span><span class="p">)</span>
@@ -637,8 +641,10 @@ Pada sifat ini, berlaku A × (B + C) = (A × B) + (A × C)</p></li>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAtriks B&quot;</span><span class="p">,</span><span class="n">listB</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;panjang baris dan kolom&quot;</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks B&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -760,8 +766,17 @@ hasil dari perkalian matrix
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Eliminasi Gaussian</p>
+        <p class="prev-next-title">Penyelesaian Persamaan Sistem Linier</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Tugas-1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Template Web Statis Dari Jupyter Book</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

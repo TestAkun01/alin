@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Eliminasi Gaussian &#8212; List Tugas</title>
+    <title>Penyelesaian Persamaan Sistem Linier &#8212; List Tugas</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Matrix" href="Tugas-3.html" />
-    <link rel="prev" title="Github" href="Tugas-1.html" />
+    <link rel="prev" title="Pendahuluan" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,14 +174,18 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Komputasi Aljabar linear
+                    Pendahuluan
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Github</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eliminasi Gaussian</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Komputasi Aljabar Linear</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Persamaan Sistem Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html">Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tambahan</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas-1.html">Template Web Statis Dari Jupyter Book</a></li>
 </ul>
 
     </div>
@@ -366,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Eliminasi Gaussian</h1>
+    <h1>Penyelesaian Persamaan Sistem Linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,7 +380,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaussian">Eliminasi Gaussian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-eliminasi-gaussian">Contoh soal eliminasi gaussian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subtitusi-balik">Subtitusi balik</a></li>
 </ul>
             </nav>
         </div>
@@ -388,8 +394,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eliminasi-gaussian">
-<h1>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-persamaan-sistem-linier">
+<h1>Penyelesaian Persamaan Sistem Linier<a class="headerlink" href="#penyelesaian-persamaan-sistem-linier" title="Link to this heading">#</a></h1>
+<p>Sistem persamaan linear adalah sekumpulan persamaan linear yang terdiri dari beberapa variabel. Contohnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*} 
+3x + 2y - z &amp;=  1 \\ 
+2x + 2y + 4z &amp;=  -2\\
+x + y + z &amp;= 1
+\end{align*}\end{split}\]</div>
+<p>Sistem ini terdiri dari tiga persamaan dengan tiga variabel x, y, z. Solusi sistem linear ini adalah nilai yang dapat menyelesaikan persamaan ini. Solusinya adalah:</p>
+<p>\begin{align*}
+x &amp;= 1\
+y &amp;= -2\
+z &amp;= -2
+\end{align*}</p>
+<section id="eliminasi-gaussian">
+<h2>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p>Eliminasi Gauss adalah algoritma yang digunakan untuk menyelesaikan sistem persamaan linear. Algoritma ini terdiri dari serangkaian operasi yang dilakukan pada matriks koefisien dari sistem persamaan tersebut.</p>
 <p>Ada tiga jenis operasi baris dasar yang dapat dilakukan pada baris matriks tersebut:</p>
 <ol class="arabic simple">
@@ -398,12 +419,27 @@ document.write(`
 <li><p>Menambahkan suatu baris dengan suatu kelipatan dari baris yang lain.</p></li>
 </ol>
 <p>Operasi-operasi ini tidak mengubah kumpulan solusi. Oleh karena itu, jika tujuan seseorang adalah untuk menyelesaikan sistem persamaan linear, penggunaan operasi baris ini dapat membuat masalah menjadi lebih mudah</p>
+</section>
 <section id="contoh-soal-eliminasi-gaussian">
 <h2>Contoh soal eliminasi gaussian<a class="headerlink" href="#contoh-soal-eliminasi-gaussian" title="Link to this heading">#</a></h2>
+<p>contoh soal :</p>
+<p>\begin{align*}
+8x_1 + 9x_2 + x_3 &amp;= 19\
+x_1  + 2x_2 + 3x_3 &amp;= 9\
+2x_1 + x_2  + x_3 &amp;= 5
+\end{align*}</p>
+<p>ubah menjadi bentuk matrix</p>
+<p>\begin{bmatrix}
+8 &amp; 9 &amp; 1 &amp; 19\
+1 &amp; 2 &amp; 3 &amp; 9\
+2 &amp; 1 &amp; 1 &amp; 5
+\end{bmatrix}</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># masukkan nilai yang ada pada matrix</span>
 <span class="n">A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">19</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
 </pre></div>
 </div>
@@ -416,8 +452,8 @@ document.write(`
 <span class="c1">#     A adalah sebuah NumPy array.  RowSwap akan menghasilkan duplicate dari </span>
 <span class="c1">#     array dengan baris k dan l di tukar</span>
 <span class="c1"># =============================================================================</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m adalah nomor baris di A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n adalah nomor kolom di A</span>
 
     <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
 
@@ -433,8 +469,8 @@ document.write(`
 <span class="c1">#     A adalah sebuah NumPy array.  RowScale akan menghasilkan duplicate dari </span>
 <span class="c1">#     array dengan baris k di kali dengan skalar bukan 0</span>
 <span class="c1"># =============================================================================</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m adalah nomor baris di A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n adalah nomor kolom di A</span>
 
     <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
 
@@ -445,12 +481,12 @@ document.write(`
 
 <span class="k">def</span> <span class="nf">RowAdd</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">scale</span><span class="p">):</span>
 <span class="c1"># =============================================================================</span>
-<span class="c1">#     A adalah sebuah NumPy array.  RowAddp akan menghasilkan duplicate dari </span>
-<span class="c1">#     array dengan baris k akan di kali dengan scalar bukan 0. lalu baris nilai</span>
+<span class="c1">#     A adalah sebuah NumPy array.  RowAdd akan menghasilkan duplicate dari </span>
+<span class="c1">#     array dengan baris k akan di kali dengan &#39;scale&#39; bukan 0. lalu nilai</span>
 <span class="c1">#     baris l akan di tambah dengan nilai baris k yang sudah dikalikan  </span>
 <span class="c1"># =============================================================================</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m adalah nomor baris di A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n adalah nomor kolom di A</span>
 
     <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
 
@@ -524,41 +560,63 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="subtitusi-balik">
+<h2>Subtitusi balik<a class="headerlink" href="#subtitusi-balik" title="Link to this heading">#</a></h2>
+<p>setelah menggunakan eliminasi gaussian dan di bulatkan di peroleh hasil sebagai berikut:</p>
+<p>\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 9\
+0 &amp; 1 &amp; 3.2 &amp; 7.5\
+0 &amp; 0 &amp; 1 &amp; 2
+\end{bmatrix}</p>
+<p>ubah menjadi bentuk persamaan</p>
+<p>\begin{align*}
+x_1 + 2x_2 + 3x_3 &amp;= 9\
+x_2 + 3.2x_3 &amp;= 7.5\
+x_3 &amp;= 2
+\end{align*}</p>
+<p>untuk mencari nilai x yang lain di gunakan metode substitusi balik</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil x3, x2  dan x1&quot;</span><span class="p">)</span>
-<span class="n">x3</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x3</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x3 =&#39;</span><span class="p">,</span><span class="n">x3</span><span class="p">)</span>
-<span class="n">x2</span> <span class="o">=</span> <span class="mf">7.57142857</span> <span class="o">-</span> <span class="mf">3.28571429</span> <span class="o">*</span><span class="mi">2</span>
+
+<span class="c1"># di peroleh nilai x3 = 2</span>
+<span class="c1"># nilai x3 akan di masukkan ke persamaan kedua</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">7.5</span> <span class="o">-</span> <span class="mf">3.2</span> <span class="o">*</span><span class="n">x3</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x2 =&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="n">x2</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x3</span><span class="o">*</span><span class="mi">3</span>
+
+<span class="c1"># di peroleh nilai x2 = 1 </span>
+<span class="c1"># nilai x3 dam x2 di masukkan ke persamaan pertama</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x2</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">x3</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x1 =&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+
+<span class="c1"># di peroleh nilai x1 = 1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil x3, x2  dan x1
-x3 = 2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x3 = 2
 x2 = 1
 x1 = 1
 </pre></div>
 </div>
 </div>
 </div>
-<p>hasil dari sistem persamaan berikut adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    8x_1 + 9x_2 + x_3 = 19\\
-    x_1  + 2x_2 + 3x_3 = 9\\
-    2x_1 + x_2  + x_3 = 5
-\end{split}\]</div>
-<p>hasil setelah di bulatkan</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    x_1 + 2x_2 + 3x_3 = 9\\
-    x_2 + 3x_3 = 8\\
-    x_3 = 2
-\end{split}\]</div>
+<p>hasil dari sistem persamaan berikut:</p>
+<p>\begin{align*}
+8x_1 + 9x_2 + x_3 &amp;= 19\
+x_1  + 2x_2 + 3x_3 &amp;= 9\
+2x_1 + x_2  + x_3 &amp;= 5
+\end{align*}</p>
+<p>diperoleh nilai dari x1, x2 dan x3 sebagai berikut:</p>
+<p>\begin{align*}
+x_1 &amp;= 1\
+x_2 &amp;= 1\
+x_3 &amp;= 2
+\end{align*}</p>
 </section>
 </section>
 
@@ -593,12 +651,12 @@ x1 = 1
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Tugas-1.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Github</p>
+        <p class="prev-next-title">Pendahuluan</p>
       </div>
     </a>
     <a class="right-next"
@@ -626,7 +684,9 @@ x1 = 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaussian">Eliminasi Gaussian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-eliminasi-gaussian">Contoh soal eliminasi gaussian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subtitusi-balik">Subtitusi balik</a></li>
 </ul>
   </nav></div>
 
