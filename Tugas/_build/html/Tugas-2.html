@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -57,8 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas-2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -182,6 +181,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Persamaan Sistem Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html">Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-4.html">Matrix Invers</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tambahan</span></p>
 <ul class="nav bd-sidenav">
@@ -394,28 +394,29 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-persamaan-sistem-linier">
+  <section id="penyelesaian-persamaan-sistem-linier">
 <h1>Penyelesaian Persamaan Sistem Linier<a class="headerlink" href="#penyelesaian-persamaan-sistem-linier" title="Link to this heading">#</a></h1>
 <p>Sistem persamaan linear adalah sekumpulan persamaan linear yang terdiri dari beberapa variabel. Contohnya adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*} 
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
 3x + 2y - z &amp;=  1 \\ 
 2x + 2y + 4z &amp;=  -2\\
 x + y + z &amp;= 1
-\end{align*}\end{split}\]</div>
+\end{align*}\]</div>
 <p>Sistem ini terdiri dari tiga persamaan dengan tiga variabel x, y, z. Solusi sistem linear ini adalah nilai yang dapat menyelesaikan persamaan ini. Solusinya adalah:</p>
-<p>\begin{align*}
-x &amp;= 1\
-y &amp;= -2\
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+x &amp;= 1\\
+y &amp;= -2\\
 z &amp;= -2
-\end{align*}</p>
+\end{align*}\]</div>
 <section id="eliminasi-gaussian">
 <h2>Eliminasi Gaussian<a class="headerlink" href="#eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p>Eliminasi Gauss adalah algoritma yang digunakan untuk menyelesaikan sistem persamaan linear. Algoritma ini terdiri dari serangkaian operasi yang dilakukan pada matriks koefisien dari sistem persamaan tersebut.</p>
 <p>Ada tiga jenis operasi baris dasar yang dapat dilakukan pada baris matriks tersebut:</p>
 <ol class="arabic simple">
 <li><p>Menukar posisi dua baris.</p></li>
-<li><p>Mengalikan suatu baris dengan skalar bukan nol .</p></li>
+<li><p>Mengalikan suatu baris dengan skalar bukan nol.</p></li>
 <li><p>Menambahkan suatu baris dengan suatu kelipatan dari baris yang lain.</p></li>
 </ol>
 <p>Operasi-operasi ini tidak mengubah kumpulan solusi. Oleh karena itu, jika tujuan seseorang adalah untuk menyelesaikan sistem persamaan linear, penggunaan operasi baris ini dapat membuat masalah menjadi lebih mudah</p>
@@ -423,17 +424,19 @@ z &amp;= -2
 <section id="contoh-soal-eliminasi-gaussian">
 <h2>Contoh soal eliminasi gaussian<a class="headerlink" href="#contoh-soal-eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p>contoh soal :</p>
-<p>\begin{align*}
-8x_1 + 9x_2 + x_3 &amp;= 19\
-x_1  + 2x_2 + 3x_3 &amp;= 9\
-2x_1 + x_2  + x_3 &amp;= 5
-\end{align*}</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+    8x_1 + 9x_2 + x_3 &amp;= 19\\
+    x_1  + 2x_2 + 3x_3 &amp;= 9\\
+    2x_1 + x_2  + x_3 &amp;= 5
+\end{align*}\]</div>
 <p>ubah menjadi bentuk matrix</p>
-<p>\begin{bmatrix}
-8 &amp; 9 &amp; 1 &amp; 19\
-1 &amp; 2 &amp; 3 &amp; 9\
+<div class="amsmath math notranslate nohighlight" id="equation-fee4dba3-b88f-468b-bcff-03f29809e995">
+<span class="eqno">(1)<a class="headerlink" href="#equation-fee4dba3-b88f-468b-bcff-03f29809e995" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+8 &amp; 9 &amp; 1 &amp; 19\\
+1 &amp; 2 &amp; 3 &amp; 9\\
 2 &amp; 1 &amp; 1 &amp; 5
-\end{bmatrix}</p>
+\end{bmatrix}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -564,17 +567,19 @@ x_1  + 2x_2 + 3x_3 &amp;= 9\
 <section id="subtitusi-balik">
 <h2>Subtitusi balik<a class="headerlink" href="#subtitusi-balik" title="Link to this heading">#</a></h2>
 <p>setelah menggunakan eliminasi gaussian dan di bulatkan di peroleh hasil sebagai berikut:</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 9\
-0 &amp; 1 &amp; 3.2 &amp; 7.5\
+<div class="amsmath math notranslate nohighlight" id="equation-47fdc952-faf4-4d7c-a401-0ded12d1a2f2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-47fdc952-faf4-4d7c-a401-0ded12d1a2f2" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 
+1 &amp; 2 &amp; 3 &amp; 9\\
+0 &amp; 1 &amp; 3.2 &amp; 7.5\\
 0 &amp; 0 &amp; 1 &amp; 2
-\end{bmatrix}</p>
+\end{bmatrix}\]</div>
 <p>ubah menjadi bentuk persamaan</p>
-<p>\begin{align*}
-x_1 + 2x_2 + 3x_3 &amp;= 9\
-x_2 + 3.2x_3 &amp;= 7.5\
-x_3 &amp;= 2
-\end{align*}</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+    x_1 + 2x_2 + 3x_3 &amp;= 9\\
+    x_2 + 3.2x_3 &amp;= 7.5\\
+    x_3 &amp;= 2
+\end{align*}\]</div>
 <p>untuk mencari nilai x yang lain di gunakan metode substitusi balik</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -606,17 +611,74 @@ x1 = 1
 </div>
 </div>
 <p>hasil dari sistem persamaan berikut:</p>
-<p>\begin{align*}
-8x_1 + 9x_2 + x_3 &amp;= 19\
-x_1  + 2x_2 + 3x_3 &amp;= 9\
-2x_1 + x_2  + x_3 &amp;= 5
-\end{align*}</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+    8x_1 + 9x_2 + x_3 &amp;= 19\\
+    x_1  + 2x_2 + 3x_3 &amp;= 9\\
+    2x_1 + x_2  + x_3 &amp;= 5
+\end{align*}\]</div>
 <p>diperoleh nilai dari x1, x2 dan x3 sebagai berikut:</p>
-<p>\begin{align*}
-x_1 &amp;= 1\
-x_2 &amp;= 1\
-x_3 &amp;= 2
-\end{align*}</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+    x_1 &amp;= 1\\
+    x_2 &amp;= 1\\
+    x_3 &amp;= 2
+\end{align*}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">AI</span><span class="p">)</span>
+
+<span class="c1"># AI1 = RowScale(AI,0,1/2)</span>
+<span class="c1"># print(AI1)</span>
+
+<span class="c1"># AI2 = RowAdd(AI1,0,1,-4)</span>
+<span class="c1"># print(AI2)</span>
+
+<span class="c1"># AI3 = RowAdd(AI2,0,2,-1)</span>
+<span class="c1"># print(AI3)</span>
+
+<span class="c1"># AI4 = RowScale(AI3,1,-1/2)</span>
+<span class="c1"># print(AI4)</span>
+
+<span class="c1"># AI5 = RowAdd(AI4,1,2,-2)</span>
+<span class="c1"># print(AI5)</span>
+
+<span class="c1"># AI6 = RowScale(AI5,2,-2)</span>
+<span class="c1"># print(AI6)</span>
+
+<span class="c1"># AI7 = RowAdd(AI6,1,0,-1)</span>
+<span class="c1"># print(AI7)</span>
+
+<span class="c1"># AI8 = RowAdd(AI7,2,1,0.5) </span>
+<span class="c1"># print(AI8)</span>
+
+<span class="c1"># AI9 = RowAdd(AI8,2,0,-1)</span>
+<span class="c1"># print(AI9)</span>
+
+<span class="n">Ainvers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mf">3.5</span><span class="p">,</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">Mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">9</span><span class="p">],[</span><span class="mi">17</span><span class="p">],[</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">dot1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Ainvers</span><span class="p">,</span><span class="n">Mat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Ainvers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dot1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2  2  1  1  0  0]
+ [ 4  2  3  0  1  0]
+ [ 1  3 -1  0  0  1]]
+[[-5.5  2.5  2. ]
+ [ 3.5 -1.5 -1. ]
+ [ 5.  -2.  -2. ]]
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

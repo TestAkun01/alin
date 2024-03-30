@@ -8,6 +8,7 @@ parts:
     chapters:
     - file: Tugas-2
     - file: Tugas-3
+    - file: Tugas-4
   - caption: Tambahan
     chapters:
     - file: Tugas-1
