@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -183,6 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas-2.html">Penyelesaian Persamaan Sistem Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas-3.html">Matrix</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrix Invers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas-5.html">Determinan</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tambahan</span></p>
 <ul class="nav bd-sidenav">
@@ -418,14 +419,14 @@ document.write(`
 <ol class="arabic simple" start="2">
 <li><p>ubah menjadi matrix <span class="math notranslate nohighlight">\(Ab\)</span></p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-fc65241a-5a51-48fd-bcc6-a5c1a5d491cb">
-<span class="eqno">()<a class="headerlink" href="#equation-fc65241a-5a51-48fd-bcc6-a5c1a5d491cb" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-52119499-ef70-4aec-9b13-6c5bf6eb1b09">
+<span class="eqno">(3)<a class="headerlink" href="#equation-52119499-ef70-4aec-9b13-6c5bf6eb1b09" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; -1\\ 
 1 &amp; 1 &amp; -1\\ 
 0 &amp; 0 &amp; 1
 \end{bmatrix}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-c783bfb3-56ac-43f8-b870-98222e2a353e">
-<span class="eqno">()<a class="headerlink" href="#equation-c783bfb3-56ac-43f8-b870-98222e2a353e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-3ebc51f8-0d4b-4e63-b257-40f1cbfbc711">
+<span class="eqno">(4)<a class="headerlink" href="#equation-3ebc51f8-0d4b-4e63-b257-40f1cbfbc711" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -3\\ 
 5\\ 
 3
@@ -433,8 +434,8 @@ document.write(`
 <ol class="arabic simple" start="2">
 <li><p>Bentuklah matriks yang diperbesar dengan matriks identitas <span class="math notranslate nohighlight">\(AI\)</span>.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-0f6512cf-667a-4d22-9941-e684098f0337">
-<span class="eqno">()<a class="headerlink" href="#equation-0f6512cf-667a-4d22-9941-e684098f0337" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-c33cd010-7624-4041-a286-99c96ec025c7">
+<span class="eqno">(5)<a class="headerlink" href="#equation-c33cd010-7624-4041-a286-99c96ec025c7" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; -1 &amp; 1 &amp; 0 &amp; 0\\ 
 1 &amp; 1 &amp; -1 &amp; 0 &amp; 1 &amp; 0\\ 
 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1
@@ -551,15 +552,15 @@ document.write(`
 <ol class="arabic simple" start="4">
 <li><p>dari operasi di atas di dapat <span class="math notranslate nohighlight">\(IA^{-1} \)</span></p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-b1d01744-53d9-4444-9652-fb72806b4688">
-<span class="eqno">()<a class="headerlink" href="#equation-b1d01744-53d9-4444-9652-fb72806b4688" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-757c4e81-7bb2-4fc8-8ee0-828a7c1deb48">
+<span class="eqno">(6)<a class="headerlink" href="#equation-757c4e81-7bb2-4fc8-8ee0-828a7c1deb48" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp;-1 &amp; 2 &amp; -4\\ 
 0 &amp; 1 &amp; 0 &amp; 1 &amp; -1 &amp; 3\\ 
 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1
 \end{bmatrix}\]</div>
 <p>maka <span class="math notranslate nohighlight">\( A^{-1} \)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ecab2010-b1b8-43b3-b51d-0d1566ab680f">
-<span class="eqno">()<a class="headerlink" href="#equation-ecab2010-b1b8-43b3-b51d-0d1566ab680f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-d285e6a3-207d-48b2-aa67-1560cf355798">
+<span class="eqno">(7)<a class="headerlink" href="#equation-d285e6a3-207d-48b2-aa67-1560cf355798" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -1 &amp; 2 &amp; -4\\ 
 1 &amp; -1 &amp; 3\\ 
 0 &amp; 0 &amp; 1
