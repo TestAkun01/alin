@@ -9,6 +9,7 @@ parts:
     - file: Tugas-2
     - file: Tugas-3
     - file: Tugas-4
+    - file: Tugas-5
   - caption: Tambahan
     chapters:
     - file: Tugas-1
